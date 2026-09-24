@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مكتب أ/عبدالملاك & أ/نرمين للمحاماة والاستشارات القانونية</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts (Cairo) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <!-- Custom CSS (inline عشان تشتغل مهما كان اسم الملف) -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        legalGold: '#c5a059',
+                        legalGoldDark: '#a3813c',
+                        legalDark: '#1a1a1a',
+                        legalGray: '#f9f9f9'
+                    },
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 flex flex-col min-h-screen relative font-cairo">
+
+    <!-- Header / Navigation Bar -->
+    <header class="bg-legalDark text-white shadow-md sticky top-0 z-50 border-b border-legalGold/30">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3 space-x-reverse">
+                <img src="assest/download.jpg" alt="شعار المكتب" class="office-logo w-12 h-12 rounded-full object-cover border-2 border-legalGold shadow-lg">
+                <div>
+                    <span class="text-xl font-bold tracking-wider block text-legalGold">مكتب أ/عبدالملاك & أ/نرمين</span>
+                    <span class="text-xs text-gray-400">للمحاماة والاستشارات القانونية</span>
+                </div>
+            </div>
+
+            <nav class="hidden md:flex space-x-8 space-x-reverse text-sm font-semibold">
+                <a href="#" class="hover:text-legalGold transition-colors">الرئيسية</a>
+                <a href="#contact-info-section" class="hover:text-legalGold transition-colors">تواصل معنا</a>
+                <a href="#booking-section" class="hover:text-legalGold transition-colors">حجز المواعيد</a>
+            </nav>
+
+            <div class="hidden lg:flex items-center gap-3">
+                <a href="https://wa.me/201271737055" target="_blank" class="bg-green-600 hover:bg-green-700 text-white font-bold px-4 py-2 rounded-lg shadow transition text-sm flex items-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> واتساب
+                </a>
+                <a href="tel:+201271737055" class="bg-legalGold hover:bg-legalGoldDark text-legalDark font-bold px-4 py-2 rounded-lg shadow transition text-sm flex items-center gap-2">
+                    <i class="fa-solid fa-phone-volume"></i> اتصال
+                </a>
+            </div>
+
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-white focus:outline-none text-2xl cursor-pointer">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-legalDark border-t border-gray-800 px-6 py-4 space-y-3">
+            <a href="#" class="block hover:text-legalGold transition">الرئيسية</a>
+            <a href="#contact-info-section" class="block hover:text-legalGold transition">تواصل معنا</a>
+            <a href="#booking-section" class="block hover:text-legalGold transition">حجز المواعيد</a>
+        </div>
+    </header>
+
+    <!-- Page Title Banner -->
+    <section class="bg-legalDark text-white py-16 text-center relative overflow-hidden border-b-4 border-legalGold">
+        <div class="container mx-auto px-6 relative z-10 space-y-6">
+            <div class="flex justify-center">
+                <img src="assest/download.jpg" alt="صورة المكتب الرئيسية" class="office-logo w-32 h-32 rounded-full object-cover border-4 border-legalGold shadow-2xl">
+            </div>
+            
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-300">أ/ عبدالملاك &nbsp;-&nbsp; أ/ نرمين</h2>
+            <h1 class="text-3xl md:text-5xl font-black text-legalGold">المحاميان بالنقض والإدارية العليا</h1>
+            <p class="text-gray-300 max-w-2xl mx-auto text-sm md:text-base leading-relaxed pt-2">
+                نقدم خدمات قانونية متكاملة لضمان حقوقكم بكفاءة واحترافية عالية، مع توفر خدمة الحجز والاستشارات (مباشر بالمكتب أو عبر زوم للموكلين من خارج مصر).
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto px-6 py-12 space-y-16">
+        
+        <!-- قسم التخصصات -->
+        <section id="specialties-section" class="space-y-8">
+            <div class="text-center max-w-xl mx-auto">
+                <span class="text-legalGold font-bold text-sm tracking-widest uppercase block mb-2">مجالات الخبرة</span>
+                <h2 class="text-3xl font-black text-legalDark">تخصصاتنا</h2>
+                <p class="text-gray-500 text-sm mt-1">نغطي كافة القطاعات القانونية لتقديم أفضل درجات الحماية والتمثيل القانوني.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-200 text-center space-y-3 hover:border-legalGold transition">
+                    <div class="w-12 h-12 bg-legalGold/10 text-legalGold rounded-full flex items-center justify-center mx-auto text-xl font-bold">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                    </div>
+                    <h3 class="font-bold text-legalDark text-lg">المنازعات المدنية</h3>
+                    <p class="text-gray-500 text-xs leading-relaxed">مباشرة كافة الدعاوى المدنية وتسوية المنازعات بحرفية تامة أمام المحاكم.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-200 text-center space-y-3 hover:border-legalGold transition">
+                    <div class="w-12 h-12 bg-legalGold/10 text-legalGold rounded-full flex items-center justify-center mx-auto text-xl font-bold">
+                        <i class="fa-solid fa-file-contract"></i>
+                    </div>
+                    <h3 class="font-bold text-legalDark text-lg">صياغة وتسيير العقود</h3>
+                    <p class="text-gray-500 text-xs leading-relaxed">صياغة العقود القانونية وتوثيقها وتسجيلها في الشهر العقاري لحماية حقوقك.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-200 text-center space-y-3 hover:border-legalGold transition">
+                    <div class="w-12 h-12 bg-legalGold/10 text-legalGold rounded-full flex items-center justify-center mx-auto text-xl font-bold">
+                        <i class="fa-solid fa-hands-holding-child"></i>
+                    </div>
+                    <h3 class="font-bold text-legalDark text-lg">التعويضات وقضايا الأسرة</h3>
+                    <p class="text-gray-500 text-xs leading-relaxed">قضايا التعويضات بمختلف أنواعها، وحل نزاعات الأحوال الشخصية وقضايا الأسرة.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-200 text-center space-y-3 hover:border-legalGold transition">
+                    <div class="w-12 h-12 bg-legalGold/10 text-legalGold rounded-full flex items-center justify-center mx-auto text-xl font-bold">
+                        <i class="fa-solid fa-gavel"></i>
+                    </div>
+                    <h3 class="font-bold text-legalDark text-lg">القضايا الجنائية</h3>
+                    <p class="text-gray-500 text-xs leading-relaxed">الدفاع والتمثيل القانوني في مختلف القضايا الجنائية بكافة مراحل التقاضي.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم تواصل معنا -->
+        <section id="contact-info-section" class="space-y-6">
+            <div class="text-center max-w-xl mx-auto">
+                <span class="text-legalGold font-bold text-sm tracking-widest uppercase block mb-2">قنوات الاتصال المباشر</span>
+                <h2 class="text-3xl font-black text-legalDark">تواصل معنا الآن</h2>
+                <p class="text-gray-500 text-sm mt-1">اختر إحدى الطريقتين أدناه للتواصل الفوري معنا عبر الهاتف أو الواتساب.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <a href="tel:+201271737055" class="bg-white p-8 rounded-3xl shadow-xl border-2 border-legalGold/30 text-center space-y-4 hover:border-legalGold hover:scale-105 transition duration-300 group block">
+                    <div class="w-20 h-20 bg-legalGold/10 text-legalGold rounded-full flex items-center justify-center mx-auto text-3xl font-bold group-hover:bg-legalGold group-hover:text-legalDark transition">
+                        <i class="fa-solid fa-phone-volume"></i>
+                    </div>
+                    <h3 class="font-black text-legalDark text-2xl">الاتصال الهاتفي بالفون</h3>
+                    <p class="text-gray-500 text-sm">اضغط للانتقال فوراً لجهة الاتصال والاتصال المباشر برقمنا</p>
+                    <span dir="ltr" class="text-legalGold font-black text-2xl block">+201271737055</span>
+                    <span class="inline-block bg-legalGold text-legalDark text-xs font-bold px-5 py-2.5 rounded-lg shadow">اتصل الآن <i class="fa-solid fa-arrow-left mr-1"></i></span>
+                </a>
+
+                <a href="https://wa.me/201271737055?text=مرحباً، أود الاستفسار عن خدمة قانونية" target="_blank" class="bg-white p-8 rounded-3xl shadow-xl border-2 border-green-500/30 text-center space-y-4 hover:border-green-600 hover:scale-105 transition duration-300 group block">
+                    <div class="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto text-3xl font-bold group-hover:bg-green-600 group-hover:text-white transition">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <h3 class="font-black text-legalDark text-2xl">التواصل واتساب</h3>
+                    <p class="text-gray-500 text-sm">اضغط للانتقال الفوري إلى تطبيق الواتساب لمراسلتنا</p>
+                    <span dir="ltr" class="text-green-600 font-black text-2xl block">+201271737055</span>
+                    <span class="inline-block bg-green-600 text-white text-xs font-bold px-5 py-2.5 rounded-lg shadow">راسلنا واتساب <i class="fa-solid fa-arrow-left mr-1"></i></span>
+                </a>
+            </div>
+        </section>
+
+        <!-- قسم حجز المواعيد مع زر التحويل المباشر للتقويم -->
+        <section id="booking-section" class="bg-legalDark text-white p-8 md:p-12 rounded-3xl shadow-xl border-2 border-legalGold text-center space-y-8">
+            <div class="max-w-xl mx-auto space-y-3">
+                <span class="text-legalGold font-bold text-sm uppercase tracking-widest block">خدمة الحجز الإلكتروني</span>
+                <h2 class="text-3xl md:text-4xl font-black text-white">احجز موعد استشارتك القانونية الآن</h2>
+                <p class="text-gray-400 text-sm md:text-base leading-relaxed">
+                    اضغط على الزر أدناه للانتقال المباشر إلى تقويم المكتب واختيار الوقت المناسب لاستشارتك بكل سهولة.
+                </p>
+            </div>
+
+            <div class="max-w-md mx-auto pt-2">
+                <a href="https://calendar.app.google/oDW1VF2DtoBTwfEe7" target="_blank" class="w-full bg-legalGold hover:bg-legalGoldDark text-legalDark font-black py-4 px-8 rounded-xl shadow-2xl transition text-lg flex items-center justify-center gap-3 transform hover:scale-105 duration-300">
+                    <i class="fa-solid fa-calendar-check text-2xl"></i> احجز موعد الان
+                </a>
+            </div>
+            
+            <p class="text-xs text-gray-400 pt-2">
+                بعد حجز الموعد عبر التقويم، يمكنك مراسلتنا مباشرة عبر الواتساب لتأكيد التفاصيل النهائية.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- نافذة مساعد المكتب التفاعلي (Chatbot Widget) -->
+    <div class="fixed bottom-6 left-6 z-50">
+        <!-- زر فتح الشات العائم -->
+        <button id="chatbot-toggle-btn" class="w-14 h-14 bg-legalGold hover:bg-legalGoldDark text-legalDark rounded-full shadow-2xl flex items-center justify-center text-2xl transition transform hover:scale-110 focus:outline-none border-2 border-white cursor-pointer">
+            <i class="fa-solid fa-comment-dots"></i>
+        </button>
+
+        <!-- نافذة المحادثة -->
+        <div id="chatbot-window" class="hidden absolute bottom-20 left-0 w-80 sm:w-96 bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden flex flex-col transition-all duration-300">
+            <!-- رأس النافذة -->
+            <div class="bg-legalDark text-white p-4 flex justify-between items-center border-b border-legalGold/30">
+                <div class="flex items-center space-x-2 space-x-reverse">
+                    <span class="w-3 h-3 bg-green-500 rounded-full inline-block animate-pulse"></span>
+                    <h3 class="font-bold text-sm">مساعد المكتب</h3>
+                </div>
+                <button id="chatbot-close-btn" class="text-gray-400 hover:text-white text-lg focus:outline-none cursor-pointer">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!-- جسم المحادثة (الرسائل) -->
+            <div id="chatbot-messages" class="p-4 h-80 overflow-y-auto space-y-4 text-xs sm:text-sm bg-gray-50 flex flex-col text-right">
+                <!-- رسالة ترحيبية من البوت -->
+                <div class="flex items-start gap-2">
+                    <div class="w-8 h-8 rounded-full bg-legalGold text-legalDark flex items-center justify-center font-bold text-xs shrink-0">بووت</div>
+                    <div class="bg-white p-3 rounded-2xl rounded-tr-none shadow-sm border border-gray-200 text-gray-800 leading-relaxed">
+                        أهلاً بيك في مكتب عبدالملاك ونرمين للمحاماة ⚖️. تقدر تسألني عن مواعيد العمل، الأسعار، أو إزاي تحجز.
+                    </div>
+                </div>
+            </div>
+
+            <!-- أزرار الاختيارات السريعة -->
+            <div class="p-3 bg-white border-t border-gray-200 flex flex-wrap gap-1.5 justify-center">
+                <button class="chatbot-quick-btn bg-gray-100 hover:bg-legalGold hover:text-legalDark text-gray-700 text-xs font-semibold py-1.5 px-3 rounded-full transition border border-gray-200 cursor-pointer" data-question="مواعيد العمل">
+                    مواعيد العمل
+                </button>
+                <button class="chatbot-quick-btn bg-gray-100 hover:bg-legalGold hover:text-legalDark text-gray-700 text-xs font-semibold py-1.5 px-3 rounded-full transition border border-gray-200 cursor-pointer" data-question="الأسعار">
+                    الأسعار
+                </button>
+                <button class="chatbot-quick-btn bg-gray-100 hover:bg-legalGold hover:text-legalDark text-gray-700 text-xs font-semibold py-1.5 px-3 rounded-full transition border border-gray-200 cursor-pointer" data-question="إزاي أحجز">
+                    إزاي أحجز
+                </button>
+                <button class="chatbot-quick-btn bg-gray-100 hover:bg-legalGold hover:text-legalDark text-gray-700 text-xs font-semibold py-1.5 px-3 rounded-full transition border border-gray-200 cursor-pointer" data-question="العنوان فين">
+                    العنوان فين
+                </button>
+                <button class="chatbot-quick-btn bg-gray-100 hover:bg-legalGold hover:text-legalDark text-gray-700 text-xs font-semibold py-1.5 px-3 rounded-full transition border border-gray-200 cursor-pointer" data-question="الاستشارات أونلاين">
+                    الاستشارات أونلاين
+                </button>
+                <button class="chatbot-quick-btn bg-gray-100 hover:bg-legalGold hover:text-legalDark text-gray-700 text-xs font-semibold py-1.5 px-3 rounded-full transition border border-gray-200 cursor-pointer" data-question="تواصل واتساب">
+                    تواصل واتساب
+                </button>
+            </div>
+
+            <!-- خانة الكتابة الحرة -->
+            <div class="p-3 bg-white border-t border-gray-200 flex items-center gap-2">
+                <input
+                    type="text"
+                    id="chatbot-text-input"
+                    placeholder="اكتب سؤالك هنا..."
+                    class="flex-grow bg-gray-100 border border-gray-200 rounded-full px-4 py-2 text-xs sm:text-sm text-right focus:outline-none focus:ring-2 focus:ring-legalGold"
+                >
+                <button id="chatbot-send-btn" class="w-9 h-9 shrink-0 bg-legalGold hover:bg-legalGoldDark text-legalDark rounded-full flex items-center justify-center transition cursor-pointer">
+                    <i class="fa-solid fa-paper-plane -scale-x-100"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-legalDark text-gray-400 py-8 text-center text-sm border-t border-legalGold/30">
+        <p>جميع الحقوق محفوظة © 2026 مكتب أ/عبدالملاك & أ/نرمين للمحاماة والاستشارات القانونية.</p>
+    </footer>
+
+    <!-- JavaScript (inline عشان تشتغل مهما كان اسم الملف) -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // لو صورة اللوجو (download.jpg) مش موجودة، استبدلها بأيقونة ميزان بدل ما تظهر مكسورة
+            document.querySelectorAll("img.office-logo").forEach(function (img) {
+                img.addEventListener("error", function () {
+                    const fallback = document.createElement("div");
+                    fallback.className = img.className.replace("object-cover", "") + " bg-legalGold/10 flex items-center justify-center text-legalGold";
+                    fallback.innerHTML = '<i class="fa-solid fa-scale-balanced"></i>';
+                    img.replaceWith(fallback);
+                }, { once: true });
+            });
+
+            const menuToggle = document.getElementById("menu-toggle");
+            const mobileMenu = document.getElementById("mobile-menu");
+
+            if (menuToggle && mobileMenu) {
+                menuToggle.addEventListener("click", function () {
+                    mobileMenu.classList.toggle("hidden");
+                });
+            }
+
+            const chatToggleBtn = document.getElementById("chatbot-toggle-btn");
+            const chatWindow = document.getElementById("chatbot-window");
+            const chatCloseBtn = document.getElementById("chatbot-close-btn");
+            const chatMessages = document.getElementById("chatbot-messages");
+
+            if (chatToggleBtn && chatWindow) {
+                chatToggleBtn.addEventListener("click", function () {
+                    chatWindow.classList.toggle("hidden");
+                });
+            }
+
+            if (chatCloseBtn && chatWindow) {
+                chatCloseBtn.addEventListener("click", function () {
+                    chatWindow.classList.add("hidden");
+                });
+            }
+
+            // الردود الجاهزة لكل سؤال من أزرار الاختيار السريع
+            const botResponses = {
+                "مواعيد العمل": "مواعيد العمل الرسمية بالمكتب يوميا ماعدا الخميس ، من الساعة 6 مساءً الي 10 مساء.",
+                "الأسعار": "الأسعار والأتعاب تُحدد بدقة على حسب نوع القضية (مدنية، جنائية، أسرة، أو صياغة عقود) وتعقيداتها القانونية. تقدر تتواصل معنا واتساب عشان نديك تقدير دقيق لقضيتك.",
+                "إزاي أحجز": "يمكنك حجز موعدك فوراً بالضغط على زر 'احجز موعد الان' الموجود في قسم حجز المواعيد، هيوديك لتقويم المكتب تختار فيه الوقت المناسب.",
+                "العنوان فين": "107 tomanby street, الزيتون الشرقية، قسم الزيتون، محافظة القاهرة‬ 11321ا.",
+                "مكان المكتب": "107 tomanby street, الزيتون الشرقية، قسم الزيتون، محافظة القاهرة‬ 11321.",
+                "الاستشارات أونلاين": "نعم، تتوافر خدمة الاستشارات القانونية عبر تطبيق زوم للموكلين من خارج مصر بالتنسيق المسبق.",
+                "تواصل واتساب": "يمكنك التواصل معنا فوراً ومراسلتنا عبر الواتساب من خلال الرقم: +201271737055"
+            };
+
+            // كلمات مفتاحية بيدور عليها البوت في أي سؤال حر يكتبه العميل
+            const keywordMap = [
+                { keywords: ["موعد العمل", "مواعيد العمل", "الدوام", "فاضي", "متاح", "شغال امتى", "المكتب مفتوح", "بتفتحوا امتى"], answer: "مواعيد العمل" },
+                { keywords: ["سعر", "الأسعار", "اتعاب", "الأتعاب", "تكلفة", "فلوس", "كام", "بكام"], answer: "الأسعار" },
+                { keywords: ["احجز", "أحجز", "حجز", "ميعاد", "موعد استشارة", "عايز اجي"], answer: "إزاي أحجز" },
+                { keywords: ["عنوان", "فين المكتب", "فين مكانكم", "لوكيشن", "location", "وين المكتب"], answer: "العنوان فين" },
+                { keywords: ["مكان", "الموقع", "عندكم فين"], answer: "مكان المكتب" },
+                { keywords: ["اونلاين", "أونلاين", "زوم", "خارج مصر", "عن بعد", "مش هقدر اجي"], answer: "الاستشارات أونلاين" },
+                { keywords: ["واتساب", "whatsapp", "رقم", "تليفون", "اتصال", "رقمكم"], answer: "تواصل واتساب" },
+                { keywords: ["سلام", "السلام عليكم", "اهلا", "أهلا", "هاي", "مرحبا"], answer: null, direct: "أهلاً بيك! تقدر تسألني عن مواعيد العمل، الأسعار، العنوان، أو إزاي تحجز، أو دوس على أي زرار تحت." },
+                { keywords: ["شكرا", "شكراً", "تمام", "ok", "تسلم"], answer: null, direct: "العفو! احنا تحت أمرك في أي وقت 🌟 تقدر تحجز موعدك من زرار 'احجز موعد الان'." }
+            ];
+
+            function findBotReply(userText) {
+                const trimmed = userText.trim();
+                const normalized = trimmed.toLowerCase();
+
+                // تطابق حرفي مع نص أحد الأزرار
+                if (botResponses[trimmed]) {
+                    return botResponses[trimmed];
+                }
+
+                // بحث بالكلمات المفتاحية داخل النص الحر
+                for (const entry of keywordMap) {
+                    for (const kw of entry.keywords) {
+                        if (normalized.includes(kw.toLowerCase())) {
+                            return entry.direct || botResponses[entry.answer];
+                        }
+                    }
+                }
+
+                return "عذراً، مش فاهم سؤالك بالظبط 🙏 جرب تسأل عن (مواعيد العمل / الأسعار / إزاي أحجز / العنوان)، أو تواصل معنا مباشرة عبر الواتساب لأي استفسار.";
+            }
+
+            function escapeHtml(str) {
+                const div = document.createElement("div");
+                div.textContent = str;
+                return div.innerHTML;
+            }
+
+            function appendMessage(text, sender) {
+                const messageDiv = document.createElement("div");
+                const safeText = escapeHtml(text);
+
+                if (sender === "user") {
+                    messageDiv.className = "flex items-start gap-2 justify-end";
+                    messageDiv.innerHTML = `
+                        <div class="bg-legalDark text-white p-3 rounded-2xl rounded-tl-none shadow-sm max-w-[80%] leading-relaxed">${safeText}</div>
+                        <div class="w-8 h-8 rounded-full bg-gray-300 text-gray-700 flex items-center justify-center font-bold text-xs shrink-0">أنت</div>
+                    `;
+                } else {
+                    messageDiv.className = "flex items-start gap-2";
+                    messageDiv.innerHTML = `
+                        <div class="w-8 h-8 rounded-full bg-legalGold text-legalDark flex items-center justify-center font-bold text-xs shrink-0">بووت</div>
+                        <div class="bg-white p-3 rounded-2xl rounded-tr-none shadow-sm border border-gray-200 text-gray-800 max-w-[80%] leading-relaxed">${safeText}</div>
+                    `;
+                }
+
+                chatMessages.appendChild(messageDiv);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+
+            document.querySelectorAll(".chatbot-quick-btn").forEach(button => {
+                button.addEventListener("click", function () {
+                    const questionText = this.getAttribute("data-question");
+
+                    appendMessage(questionText, "user");
+
+                    setTimeout(() => {
+                        appendMessage(findBotReply(questionText), "bot");
+                    }, 400);
+                });
+            });
+
+            // التعامل مع خانة الكتابة الحرة وزر الإرسال
+            const chatTextInput = document.getElementById("chatbot-text-input");
+            const chatSendBtn = document.getElementById("chatbot-send-btn");
+
+            function sendUserMessage() {
+                if (!chatTextInput) return;
+                const text = chatTextInput.value.trim();
+                if (text === "") return;
+
+                appendMessage(text, "user");
+                chatTextInput.value = "";
+
+                setTimeout(() => {
+                    appendMessage(findBotReply(text), "bot");
+                }, 400);
+            }
+
+            if (chatSendBtn) {
+                chatSendBtn.addEventListener("click", sendUserMessage);
+            }
+
+            if (chatTextInput) {
+                chatTextInput.addEventListener("keydown", function (e) {
+                    if (e.key === "Enter") {
+                        e.preventDefault();
+                        sendUserMessage();
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
